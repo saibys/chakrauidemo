@@ -1,14 +1,23 @@
-import { Heading,Button,Text,Box, Flex ,HStack, Spacer} from "@chakra-ui/react";
+import {
+  Heading,
+  Button,
+  Text,
+  Box,
+  Flex,
+  HStack,
+  Spacer,
+} from "@chakra-ui/react";
 
 export default function Navbar() {
   return (
-
     <Flex as="nav" p="10px" alignItems="center">
       <Heading as="h1">Dojo Tasks</Heading>
       <Spacer />
 
-      <HStack spacing="20px"> 
-        <Box bg="blue" p="10px" >RG</Box>
+      <HStack spacing="20px">
+        <Box bg="blue" p="10px">
+          RG
+        </Box>
         <Text>RAMAN@POOCHO.CO</Text>
         <Button colorScheme="purple">Logout</Button>
       </HStack>
@@ -20,5 +29,5 @@ export default function Navbar() {
     //   <Box w="150px" h='50px' bg="yellow" flexGrow="2" >4</Box>
 
     // </Flex>
-  )
+  );
 }
