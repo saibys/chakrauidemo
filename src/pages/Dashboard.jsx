@@ -1,23 +1,32 @@
-import { Heading, Text, Container } from "@chakra-ui/react";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
 
 export default function Dashboard() {
+
+  const boxStyles = {
+    p: "10px",
+    bg: "purple.400",
+    color: "white",
+    m: "10px",
+    textAlign: 'center',
+    ':hover': {
+      color: 'black',
+    },
+    filter: 'blur(2px)'
+  }
+
   return (
-    <Container>
-      <Heading my="30px" p="10px">
-        Chakra UI
-      </Heading>
-      <Text ml="20px">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-        repellendus officiis labore nulla suscipit similique nisi ea
-        consequuntur impedit! Repellendus, aperiam est dolor consequatur sunt
-        earum dolores totam odit placeat?
-      </Text>
-      <Text marginLeft="20px" color="red.300" fontWeight="bold">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-        repellendus officiis labore nulla suscipit similique nisi ea
-        consequuntur impedit! Repellendus, aperiam est dolor consequatur sunt
-        earum dolores totam odit placeat?
-      </Text>
+    <Container as="section" maxWidth="4xl" py="20px">
+      <Heading my="30px" p="10px">Chakra UI Components</Heading>
+
+      <Text marginLeft="30px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minima impedit inventore facilis amet, doloremque repellat dicta officia</Text>
+
+      <Text ml="30px" color="blue.300" fontWeight="bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minima impedit inventore facilis amet, doloremque repellat dicta officia</Text>
+
+      <Box my="30px" p="20px" bg="orange">
+        <Text color="white">This is a Box</Text>
+      </Box>
+
+      <Box sx={boxStyles}>Hello, Ninjas!</Box>
     </Container>
-  );
+  )
 }
